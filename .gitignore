@@ -1,0 +1,11 @@
+project/__pycache__/
+ranker/__pycache__/
+searcher/__pycache__/
+scripts/__pycache__/
+ranker/migrations/
+searcher/migrations/
+scripts/migrations/
+app/__pycache__/
+app/migrations/__pycache__/
+
+
