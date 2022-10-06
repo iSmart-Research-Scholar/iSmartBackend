@@ -1,0 +1,864 @@
+{
+  "total_records": 21,
+  "total_searched": 5747697,
+  "articles": [
+    {
+      "doi": "10.1109/ICSensT.2011.6137014",
+      "title": "RF hand gesture sensor for monitoring of cigarette smoking",
+      "publisher": "IEEE",
+      "isbn": "978-1-4577-0166-5",
+      "issn": "2156-8065",
+      "partnum": "11EX5393",
+      "rank": 1,
+      "authors": {
+        "authors": [
+          {
+            "affiliation": "Department of Electrical and Computer Engineering, University of Alabama, Tuscaloosa, AL, USA",
+            "authorUrl": "https://ieeexplore.ieee.org/author/38367985600",
+            "id": 38367985600,
+            "full_name": "Edward Sazonov",
+            "author_order": 1
+          },
+          {
+            "affiliation": "Department of Electrical and Computer Engineering, University of Alabama, Tuscaloosa, AL, USA",
+            "authorUrl": "https://ieeexplore.ieee.org/author/38298629700",
+            "id": 38298629700,
+            "full_name": "Kristopher Metcalfe",
+            "author_order": 2
+          },
+          {
+            "affiliation": "Department of Electrical and Computer Engineering, University of Alabama, Tuscaloosa, AL, USA",
+            "authorUrl": "https://ieeexplore.ieee.org/author/38270134100",
+            "id": 38270134100,
+            "full_name": "Paulo Lopez-Meyer",
+            "author_order": 3
+          },
+          {
+            "affiliation": "Department of Psychology, State University of New York, University at Buffalo, Buffalo, NY, USA",
+            "authorUrl": "https://ieeexplore.ieee.org/author/38324637500",
+            "id": 38324637500,
+            "full_name": "Stephen Tiffany",
+            "author_order": 4
+          }
+        ]
+      },
+      "access_type": "LOCKED",
+      "content_type": "Conferences",
+      "abstract": "Today, over a billion people in the world are smokers. Smoking is associated with increased risk of cardiovascular disease, chronic obstructive pulmonary disease, emphysema, and various cancers, causing approximately 6 million premature deaths per year. Current methods of assessing smoking behavior (e.g., self-report, portable puff-topography instruments) do not permit the collection of accurate, non-reactive measures that capture real-time smoking frequency and comprehensive within-cigarette puff topography. Our goal is development of a noninvasive wearable sensor system (Personal Automatic Cigarette Tracker - PACT) that is completely transparent to the end user and does not require any conscience effort to achieve reliable monitoring of smoking behavior in free living individuals. A key component of PACT is a sensor that captures a characteristic hand-to-mouth gesture preceding cigarette smoke inhalations. This paper details design and validation of a wearable radio-frequency proximity sensor that measures the distance between an individual's wrist and chest in real-time. Hand-to-mouth gestures detected with this device provide quantitative data that can be used for analysis of behavioral patterns during smoking and other activities.",
+      "article_number": "6137014",
+      "pdf_url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6137014",
+      "html_url": "https://ieeexplore.ieee.org/document/6137014/",
+      "abstract_url": "https://ieeexplore.ieee.org/document/6137014/",
+      "publication_title": "2011 Fifth International Conference on Sensing Technology",
+      "conference_location": "Palmerston North, New Zealand",
+      "conference_dates": "28 Nov.-1 Dec. 2011",
+      "publication_number": 6126166,
+      "is_number": 6136939,
+      "publication_year": 2011,
+      "publication_date": "28 Nov.-1 Dec. 2011",
+      "start_page": "426",
+      "end_page": "430",
+      "citing_paper_count": 18,
+      "citing_patent_count": 0,
+      "index_terms": {
+        "ieee_terms": {
+          "terms": [
+            "Radio transmitters",
+            "Monitoring",
+            "Receivers",
+            "Transmitting antennas",
+            "Radio frequency",
+            "Sensitivity"
+          ]
+        },
+        "author_terms": {
+          "terms": ["smoking", "hand gesture", "sensor"]
+        }
+      },
+      "isbn_formats": {
+        "isbns": [
+          {
+            "format": "CD",
+            "value": "978-1-4577-0166-5",
+            "isbnType": "New-2005"
+          },
+          {
+            "format": "Print ISBN",
+            "value": "978-1-4577-0168-9",
+            "isbnType": "New-2005"
+          },
+          {
+            "format": "Electronic ISBN",
+            "value": "978-1-4577-0167-2",
+            "isbnType": "New-2005"
+          }
+        ]
+      }
+    },
+    {
+      "doi": "10.1109/ICPRIME.2012.6208385",
+      "title": "A review of early detection of cancers using breath analysis",
+      "publisher": "IEEE",
+      "isbn": "978-1-4673-1038-3",
+      "partnum": "12EX6161",
+      "rank": 2,
+      "authors": {
+        "authors": [
+          {
+            "affiliation": "Department of Computer Science, Periyar University, Salem, India",
+            "authorUrl": "https://ieeexplore.ieee.org/author/38244140400",
+            "id": 38244140400,
+            "full_name": "D. Arul Pon Daniel",
+            "author_order": 1
+          },
+          {
+            "affiliation": "Department of Computer Science, Periyar University, Salem, India",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37680522000",
+            "id": 37680522000,
+            "full_name": "K. Thangavel",
+            "author_order": 2
+          },
+          {
+            "affiliation": "Department of Computer Science, Periyar Universi, Salem, India",
+            "authorUrl": "https://ieeexplore.ieee.org/author/38243847100",
+            "id": 38243847100,
+            "full_name": "R. Subash Chandra Boss",
+            "author_order": 3
+          }
+        ]
+      },
+      "access_type": "LOCKED",
+      "content_type": "Conferences",
+      "abstract": "Authentic and accurate information is basic to any disease control initiative. More than 70% of diseases are related to life-style factors such as food and beverage practices, personal habits, infections, tobacco consumption and social customs. In addition, urbanization, industrialization and increasing life-span are also known to influence the cancer pattern globally. This necessitates proper appreciation of risk factors and other causes of cancer by the people. Various modalities for early detection through screening are being investigated. Majority of the patients have locally advanced or disseminated disease at presentation and are not candidates for surgery. Chemotherapy applied as an adjunct with radiation improves survival and the quality of life. New anticancer drugs, which have emerged during the last decade, have shown an improved efficacy toxicity ratio. This review is more about the diagnosing cancer at an early stage using invasive electronic sensors and intelligent computing methods by capturing only the breath of the human being. Strengthening the methods for early diagnosis of cancers and improved treatments will have a significant impact on cutting death rates.",
+      "article_number": "6208385",
+      "pdf_url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6208385",
+      "html_url": "https://ieeexplore.ieee.org/document/6208385/",
+      "abstract_url": "https://ieeexplore.ieee.org/document/6208385/",
+      "publication_title": "International Conference on Pattern Recognition, Informatics and Medical Engineering (PRIME-2012)",
+      "conference_location": "Salem, India",
+      "conference_dates": "21-23 March 2012",
+      "publication_number": 6203247,
+      "is_number": 6208277,
+      "publication_year": 2012,
+      "publication_date": "21-23 March 2012",
+      "start_page": "433",
+      "end_page": "438",
+      "citing_paper_count": 2,
+      "citing_patent_count": 0,
+      "index_terms": {
+        "ieee_terms": {
+          "terms": [
+            "Cancer",
+            "Lungs",
+            "Biopsy",
+            "Diseases",
+            "Breast",
+            "Sensor arrays"
+          ]
+        },
+        "author_terms": {
+          "terms": [
+            "Early Detection of Cancers",
+            "Breath Analysis",
+            "VOC",
+            "Cancers Biomarker",
+            "Machine Learning"
+          ]
+        }
+      },
+      "isbn_formats": {
+        "isbns": [
+          {
+            "format": "CD",
+            "value": "978-1-4673-1038-3",
+            "isbnType": "New-2005"
+          },
+          {
+            "format": "Print ISBN",
+            "value": "978-1-4673-1037-6",
+            "isbnType": "New-2005"
+          },
+          {
+            "format": "Electronic ISBN",
+            "value": "978-1-4673-1039-0",
+            "isbnType": "New-2005"
+          }
+        ]
+      }
+    },
+    {
+      "doi": "10.1109/HICSS.2013.89",
+      "title": "An mHealth Recommender for Smoking Cessation Using Case Based Reasoning",
+      "publisher": "IEEE",
+      "isbn": "978-0-7695-4892-0",
+      "issn": "1530-1605",
+      "partnum": "13PR4892",
+      "rank": 3,
+      "authors": {
+        "authors": [
+          {
+            "affiliation": "APuHC, UNSW, Australia",
+            "authorUrl": "https://ieeexplore.ieee.org/author/38578937000",
+            "id": 38578937000,
+            "full_name": "Koel Ghorai",
+            "author_order": 1
+          },
+          {
+            "affiliation": "IIM Calcutta, India",
+            "authorUrl": "https://ieeexplore.ieee.org/author/38571398200",
+            "id": 38571398200,
+            "full_name": "Sourav Saha",
+            "author_order": 2
+          },
+          {
+            "affiliation": "APuHC, UNSW, Australia",
+            "authorUrl": "https://ieeexplore.ieee.org/author/38236857100",
+            "id": 38236857100,
+            "full_name": "Aishwarya Bakshi",
+            "author_order": 3
+          },
+          {
+            "affiliation": "IIM Calcutta, India",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37265512000",
+            "id": 37265512000,
+            "full_name": "Ambuj Mahanti",
+            "author_order": 4
+          },
+          {
+            "affiliation": "APuHC, UNSW, Australia",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37268170600",
+            "id": 37268170600,
+            "full_name": "Pradeep Ray",
+            "author_order": 5
+          }
+        ]
+      },
+      "access_type": "LOCKED",
+      "content_type": "Conferences",
+      "abstract": "The possible cause of many life-threatening diseases such as lung cancer and cardiac myopathy lies in the addiction to tobacco. Apart from being responsible for premature deaths, early diseases and reduced immunity, smoking also inhibits physiological and psychological problems in children born from addicted mothers. Though many developed countries have consciously made efforts to curb smoking, for the developing countries, the trend is still on the rise. The promising factor is that there are many people who are willing to quit smoking and are resorting to technology and electronic media for the same. In this paper, we have proposed a unique smoking intervention plan with the help of mobile phones that uses a Case Based Recommender system. Our model resorts to generating finely customized motivational messages depending on the patient profile and delivery of the same via mobile phones.",
+      "article_number": "6480169",
+      "pdf_url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6480169",
+      "html_url": "https://ieeexplore.ieee.org/document/6480169/",
+      "abstract_url": "https://ieeexplore.ieee.org/document/6480169/",
+      "publication_title": "2013 46th Hawaii International Conference on System Sciences",
+      "conference_location": "Wailea, HI, USA",
+      "conference_dates": "7-10 Jan. 2013",
+      "publication_number": 6479598,
+      "is_number": 6479821,
+      "publication_year": 2013,
+      "publication_date": "7-10 Jan. 2013",
+      "start_page": "2695",
+      "end_page": "2704",
+      "citing_paper_count": 8,
+      "citing_patent_count": 0,
+      "index_terms": {
+        "ieee_terms": {
+          "terms": [
+            "Recommender systems",
+            "Mobile communication",
+            "Mobile handsets",
+            "Diseases",
+            "Educational institutions",
+            "Cognition",
+            "Lungs"
+          ]
+        },
+        "author_terms": {
+          "terms": ["mHealth", "ehealth", "smoking", "cessation", "recommender"]
+        }
+      },
+      "isbn_formats": {
+        "isbns": [
+          {
+            "format": "Electronic ISBN",
+            "value": "978-0-7695-4892-0",
+            "isbnType": "New-2005"
+          },
+          {
+            "format": "Print ISBN",
+            "value": "978-1-4673-5933-7",
+            "isbnType": "New-2005"
+          }
+        ]
+      }
+    },
+    {
+      "doi": "10.1109/COMPSACW.2013.61",
+      "title": "Toward an mHealth Intervention for Smoking Cessation",
+      "publisher": "IEEE",
+      "isbn": "978-1-4799-2159-1",
+      "rank": 4,
+      "authors": {
+        "authors": [
+          {
+            "affiliation": "Marquette University, Milwaukee, WI, USA",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37074010900",
+            "id": 37074010900,
+            "full_name": "G.M. Tanimul Ahsan",
+            "author_order": 1
+          },
+          {
+            "affiliation": "Marquette University, Milwaukee, WI, USA",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37074114700",
+            "id": 37074114700,
+            "full_name": "Ivor D. Addo",
+            "author_order": 2
+          },
+          {
+            "affiliation": "Marquette University, Milwaukee, WI, USA",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37270354900",
+            "id": 37270354900,
+            "full_name": "S. Iqbal Ahamed",
+            "author_order": 3
+          },
+          {
+            "affiliation": "Rapid City Regional Hospital, Rapid, SD, USA",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37074278500",
+            "id": 37074278500,
+            "full_name": "Daniel Petereit",
+            "author_order": 4
+          },
+          {
+            "affiliation": "Rapid City Regional Hospital, Rapid, SD, USA",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37073975500",
+            "id": 37073975500,
+            "full_name": "Shalini Kanekar",
+            "author_order": 5
+          },
+          {
+            "affiliation": "Native American Cancer Initiatives, USA",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37074655400",
+            "id": 37074655400,
+            "full_name": "Linda Burhansstipanov",
+            "author_order": 6
+          },
+          {
+            "affiliation": "Native American Cancer Initiatives, USA",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37074688300",
+            "id": 37074688300,
+            "full_name": "Linda U. Krebs",
+            "author_order": 7
+          }
+        ]
+      },
+      "access_type": "LOCKED",
+      "content_type": "Conferences",
+      "abstract": "The prevalence of tobacco dependence in the United States (US) remains alarming. Invariably, smoke-related health problems are the leading preventable causes of death in the US. Research has shown that a culturally tailored cessation counseling program can help reduce smoking and other tobacco usage. In this paper, we present a mobile health (mHealth) solution that leverages the Short Message Service (SMS) or text messaging feature of mobile devices to motivate behavior change among tobacco users. Our approach implements the Theory of Planned Behavior (TPB) and a phase-based framework. We make contributions to improving previous mHealth intervention approaches by delivering personalized and evidence-based motivational SMS messages to participants. Our proposed solution implements machine learning algorithms that take the participant's demographic profile and previous smoking behavior into account. We discuss our preliminary evaluation of the system against a couple of pseudo-scenarios and our observation of the system's performance.",
+      "article_number": "6605814",
+      "pdf_url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6605814",
+      "html_url": "https://ieeexplore.ieee.org/document/6605814/",
+      "abstract_url": "https://ieeexplore.ieee.org/document/6605814/",
+      "publication_title": "2013 IEEE 37th Annual Computer Software and Applications Conference Workshops",
+      "conference_location": "Japan",
+      "conference_dates": "22-26 July 2013",
+      "publication_number": 6605718,
+      "is_number": 6605724,
+      "publication_year": 2013,
+      "publication_date": "22-26 July 2013",
+      "start_page": "345",
+      "end_page": "350",
+      "citing_paper_count": 11,
+      "citing_patent_count": 0,
+      "index_terms": {
+        "ieee_terms": {
+          "terms": [
+            "Mobile handsets",
+            "Mobile communication",
+            "Communities",
+            "Engines",
+            "Machine learning algorithms",
+            "Medical services",
+            "Logic gates"
+          ]
+        },
+        "author_terms": {
+          "terms": [
+            "Theory of Planned Behavior",
+            "Phase-based avior",
+            "Phase-based Framework",
+            "Smoking cessation",
+            "mHealth"
+          ]
+        }
+      },
+      "isbn_formats": {
+        "isbns": [
+          {
+            "format": "Electronic ISBN",
+            "value": "978-1-4799-2159-1",
+            "isbnType": "New-2005"
+          }
+        ]
+      }
+    },
+    {
+      "doi": "10.1109/ICCPCT.2014.7054852",
+      "title": "Proficient modus operandi for scrutinize air pollution using wireless sensor network",
+      "publisher": "IEEE",
+      "isbn": "978-1-4799-2395-3",
+      "rank": 5,
+      "authors": {
+        "authors": [
+          {
+            "affiliation": "Veltech University, Chennai, India",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37085425632",
+            "id": 37085425632,
+            "full_name": "Burla Rajesh",
+            "author_order": 1
+          },
+          {
+            "affiliation": "Veltech University, Chennai, India",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37085414237",
+            "id": 37085414237,
+            "full_name": "Ankit Agarwal",
+            "author_order": 2
+          },
+          {
+            "affiliation": "Veltech University, Chennai, India",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37089435540",
+            "id": 37089435540,
+            "full_name": "K. Aanandha Saravanan",
+            "author_order": 3
+          }
+        ]
+      },
+      "access_type": "LOCKED",
+      "content_type": "Conferences",
+      "abstract": "Air pollution is a critical environmental issue which is focused due materials such as Nitrogen dioxide, Carbon dioxide, Carbon monoxide, Methane, hydro carbons etc., heavy population and rapid increase in industries and vehicular transport development across the globe. This major problem should be identified, monitored and kept in control. It is also found that air pollution is the fifth cause for death in India after high blood pressure, heart diseases, poor nutrition and tobacco smoking, about 6, 20,000 deaths occur due to air pollution every year. According to World Health Organization International agency for cancer research has identified that air pollution causes carcinogenic, a major cause for lung cancer in humans. It also puts air pollution in same category as tobacco, UV rays etc. Urban air pollution causes 1.3 million deaths globally every year. A quarter of these deaths are due to lung cancer. The number of premature deaths has been increased six folds in these ten years. There are traditional air monitoring station available are quiet few and are very expensive. In paper we will discuss a dynamic and proficient method of scrutinize air pollution using wireless sensor network. The sensor materials monitors and controls the air quality system. The nodes are distributed in area of interest to measure air quality index, compared with standard value and the collected information are transmitted to the nearest base station and to the control room for air pollution. For power management requirements the processor can be made in sleep mode during idle conditions.",
+      "article_number": "7054852",
+      "pdf_url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7054852",
+      "html_url": "https://ieeexplore.ieee.org/document/7054852/",
+      "abstract_url": "https://ieeexplore.ieee.org/document/7054852/",
+      "publication_title": "2014 International Conference on Circuits, Power and Computing Technologies [ICCPCT-2014]",
+      "conference_location": "Nagercoil, India",
+      "conference_dates": "20-21 March 2014",
+      "publication_number": 7045158,
+      "is_number": 7054731,
+      "publication_year": 2014,
+      "publication_date": "20-21 March 2014",
+      "start_page": "1312",
+      "end_page": "1316",
+      "citing_paper_count": 2,
+      "citing_patent_count": 0,
+      "index_terms": {
+        "ieee_terms": {
+          "terms": [
+            "Air pollution",
+            "Monitoring",
+            "Carbon dioxide",
+            "Wireless sensor networks",
+            "Pollution measurement",
+            "Cancer"
+          ]
+        },
+        "author_terms": {
+          "terms": [
+            "Air pollution",
+            "sensor nodes",
+            "scrutinize",
+            "power management"
+          ]
+        }
+      },
+      "isbn_formats": {
+        "isbns": [
+          {
+            "format": "CD",
+            "value": "978-1-4799-2395-3",
+            "isbnType": "New-2005"
+          },
+          {
+            "format": "Electronic ISBN",
+            "value": "978-1-4799-2397-7",
+            "isbnType": "New-2005"
+          }
+        ]
+      }
+    },
+    {
+      "doi": "10.1109/ICAT.2015.7340520",
+      "title": "Prediction of lung nicotine concentration based on novel GA-ANFIS system approach",
+      "publisher": "IEEE",
+      "isbn": "978-1-4673-8145-1",
+      "rank": 6,
+      "authors": {
+        "authors": [
+          {
+            "affiliation": "IT research department, Tobacco Factory Sarajevo, Sarajevo, Bosnia and Herzegovina",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37087361830",
+            "id": 37087361830,
+            "full_name": "Lejla Begic Fazlic",
+            "author_order": 1
+          },
+          {
+            "affiliation": "Faculty of Medicine-Ludwig Maximilian University of Munich, Munich, Germany",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37085673066",
+            "id": 37085673066,
+            "full_name": "Aja Avdagic",
+            "author_order": 2
+          }
+        ]
+      },
+      "access_type": "LOCKED",
+      "content_type": "Conferences",
+      "abstract": "This paper presents novel GA-ANFIS expert system approach for the prediction of lung nicotine concentration by using \"on inspect machine\" recorded data. Smoking causes the majority of lung cancers — both in smokers and in people exposed to secondhand smoke. Total yields of cigarette smoke constituents are greatly influenced by smoking behavior. The size of particles in the smoke inhaled directly from a cigarette is controlled by ventilation and it has the largest influence on reducing tar, nicotine and carbon monoxide yields. Our goal is to get better results in prediction of ventilation as well as lung nicotine concentration for different type of cigarette data under the same smoking condition. The data, recorded for different type of cigarettes, are collected by special equipment in real conditions within cigarette factory. GA-ANFIS expert system performs optimization in two steps. In the first step, it generates eight different ANFIS structures, after which it makes second level of optimization using results from ANFIS structure and finally resulting in optimal fuzzy model structures. Validation of the novel GA-ANFIS expert system approach is performed in MATLAB environment by using data set that was not used in the fuzzy model training and testing.",
+      "article_number": "7340520",
+      "pdf_url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7340520",
+      "html_url": "https://ieeexplore.ieee.org/document/7340520/",
+      "abstract_url": "https://ieeexplore.ieee.org/document/7340520/",
+      "publication_title": "2015 XXV International Conference on Information, Communication and Automation Technologies (ICAT)",
+      "conference_location": "Sarajevo, Bosnia and Herzegovina",
+      "conference_dates": "29-31 Oct. 2015",
+      "publication_number": 7331833,
+      "is_number": 7340493,
+      "publication_year": 2015,
+      "publication_date": "29-31 Oct. 2015",
+      "start_page": "1",
+      "end_page": "6",
+      "citing_paper_count": 1,
+      "citing_patent_count": 0,
+      "index_terms": {
+        "ieee_terms": {
+          "terms": ["Decision support systems", "Yttrium"]
+        },
+        "author_terms": {
+          "terms": [
+            "Adaptive Neuro-Fuzzy Inference System (ANFIS)",
+            "GA (Genetic Algorithm)",
+            "GA-ANFIS expert system",
+            "Lung ventilation",
+            "pressure drop",
+            "pressure drop encapsulated"
+          ]
+        }
+      },
+      "isbn_formats": {
+        "isbns": [
+          {
+            "format": "CD",
+            "value": "978-1-4673-8145-1",
+            "isbnType": "New-2005"
+          },
+          {
+            "format": "Electronic ISBN",
+            "value": "978-1-4673-8146-8",
+            "isbnType": "New-2005"
+          }
+        ]
+      }
+    },
+    {
+      "doi": "10.1109/BIBM.2015.7359903",
+      "title": "The upregulation of Myb and Peg3 may mediate EGCG inhibition effect on mouse lung adenocarcinoma",
+      "publisher": "IEEE",
+      "isbn": "978-1-4673-6798-1",
+      "rank": 7,
+      "authors": {
+        "authors": [
+          {
+            "affiliation": "Department of Mathematical Sciences, University of Saint Joseph, West Hartford, CT, USA",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37085720591",
+            "id": 37085720591,
+            "full_name": "Hong Zhou",
+            "author_order": 1
+          },
+          {
+            "affiliation": "Department of Mathematical Sciences, University of Saint Joseph, West Hartford, CT, USA",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37085733137",
+            "id": 37085733137,
+            "full_name": "Joseph Manthey",
+            "author_order": 2
+          },
+          {
+            "affiliation": "Department of Mathematical Sciences, University of Saint Joseph, West Hartford, CT, USA",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37085722445",
+            "id": 37085722445,
+            "full_name": "Ekaterina Lioutikova",
+            "author_order": 3
+          },
+          {
+            "affiliation": "Middle South Bioinformatics Center and Joint Bioinformatics Ph.D. Program, George Washington Donaghey College of Engineering and Information Technology, University of Arkansas at Little Rock and University of Arkansas for Medical Sciences, 2801 S. University Avenue, 72204 U.S.A",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37087485687",
+            "id": 37087485687,
+            "full_name": "Mary Qu Yang",
+            "author_order": 4
+          },
+          {
+            "affiliation": "Department of Computer Science, University of Arkansas at Little Rock and University of Arkansas for Medical Sciences, Little Rock, Arkansas, U.S.A",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37085723504",
+            "id": 37085723504,
+            "full_name": "William Yang",
+            "author_order": 5
+          },
+          {
+            "affiliation": "Department of Computer Science, University of Arkansas at Little Rock and University of Arkansas for Medical Sciences, Little Rock, Arkansas, U.S.A",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37269327300",
+            "id": 37269327300,
+            "full_name": "Kenji Yoshigoe",
+            "author_order": 6
+          },
+          {
+            "affiliation": "Department of Chemical Biology and Center for Cancer Prevention Research Ernest Mario School of Pharmacy Rutgers, The State University of New Jersey, Rutgers, NJ, USA",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37085731233",
+            "id": 37085731233,
+            "full_name": "Hong Wang",
+            "author_order": 7
+          }
+        ]
+      },
+      "access_type": "LOCKED",
+      "content_type": "Conferences",
+      "abstract": "The antioxidant activity of green tea polyphenol epigallocatechin-3-gallate (EGCG) has been found to be critical in inhibiting carcinogenesis. In our previous study, we identified a set of protein coding genes and microRNAs whose expressions were significantly modulated in response to the EGCG treatment in tobacco carcinogen-induced lung adenocarcinoma in A/J mice. In this study, we further conducted some statistical analysis on our microarray data and employed The Cancer Genome Atlas (TCGA) lung adenocarcinoma datasets as additional control. We postulated that if a gene mediates EGCG's cancer inhibition, its expression level change caused by EGCG should be opposite to what occurred in the carcinogenesis. With this assumption, we identified Myb and Peg3 as the primary genes involved in the cancer inhibitory activities of EGCG.",
+      "article_number": "7359903",
+      "pdf_url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7359903",
+      "html_url": "https://ieeexplore.ieee.org/document/7359903/",
+      "abstract_url": "https://ieeexplore.ieee.org/document/7359903/",
+      "publication_title": "2015 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)",
+      "conference_location": "Washington, DC, USA",
+      "conference_dates": "9-12 Nov. 2015",
+      "publication_number": 7350074,
+      "is_number": 7359638,
+      "publication_year": 2015,
+      "publication_date": "9-12 Nov. 2015",
+      "start_page": "1532",
+      "end_page": "1535",
+      "citing_paper_count": 0,
+      "citing_patent_count": 0,
+      "index_terms": {
+        "ieee_terms": {
+          "terms": [
+            "Lungs",
+            "Genomics",
+            "Bioinformatics",
+            "Production",
+            "Immune system",
+            "Cancer"
+          ]
+        },
+        "author_terms": {
+          "terms": ["EGCG", "Myb", "Peg3", "lung adenocarcinoma"]
+        }
+      },
+      "isbn_formats": {
+        "isbns": [
+          {
+            "format": "USB ISBN",
+            "value": "978-1-4673-6798-1",
+            "isbnType": "New-2005"
+          },
+          {
+            "format": "Electronic ISBN",
+            "value": "978-1-4673-6799-8",
+            "isbnType": "New-2005"
+          }
+        ]
+      }
+    },
+    {
+      "doi": "10.1269/jrr.09044",
+      "title": "Radiation Dose Measurement by Electron Spin Resonance Studies of Tooth Enamel in Lime and Non-lime Consuming Individuals from the Silchar Region of Northeast India",
+      "publisher": "OUP",
+      "issue": "6",
+      "issn": "1349-9157",
+      "rank": 8,
+      "volume": "50",
+      "authors": {
+        "authors": [
+          {
+            "full_name": "Deborshi Bhattacharjee",
+            "author_order": 1
+          },
+          {
+            "full_name": "Alexander I. Ivannikov",
+            "author_order": 2
+          },
+          {
+            "full_name": "Kassym Zhumadilov",
+            "author_order": 3
+          },
+          {
+            "full_name": "Valeriy F. Stepanenko",
+            "author_order": 4
+          },
+          {
+            "full_name": "Kenichi Tanaka",
+            "author_order": 5
+          },
+          {
+            "full_name": "Satoru Endo",
+            "author_order": 6
+          },
+          {
+            "full_name": "Megu Ohtaki",
+            "author_order": 7
+          },
+          {
+            "full_name": "Shin Toyoda",
+            "author_order": 8
+          },
+          {
+            "full_name": "Joyeeta Bhattacharyya",
+            "author_order": 9
+          },
+          {
+            "full_name": "Masaharu Hoshi",
+            "author_order": 10
+          }
+        ]
+      },
+      "access_type": "LOCKED",
+      "content_type": "Journals",
+      "abstract": "Electron spin resonance (ESR) dosimetry of teeth is used extensively for dose estimation following exposure to radiation. The population inhabiting the northeast region of India is prone to different cancers of the head and neck, and their prevalence is several times the national average. The objective of this study was to determine the role of radiation in the causation of this high cancer incidence by performing ESR spectroscopic measurements of tooth samples collected from the general population living in and around the city of Silchar. Nineteen tooth samples were used, and the age of the patients was 13-60 years. The excess dose, determined by subtraction of the natural background dose from the dose absorbed by the enamel, was found to the extent of 123 ± 43 mGy. However, the individual excess dose was found to be higher in subjects who consumed lime (5/6) than in non-lime-consuming subjects (2/13). It is not entirely clear if radiation is the cause of this excess cancer in this region of India. Therefore there is a need for wider studies including consideration of tobacco consumption as well as a larger number of samples for tooth enamel dosimetry.",
+      "article_number": "8154688",
+      "pdf_url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8154688",
+      "html_url": "https://ieeexplore.ieee.org/document/8154688/",
+      "abstract_url": "https://ieeexplore.ieee.org/document/8154688/",
+      "publication_title": "Journal of Radiation Research",
+      "publication_number": 8016807,
+      "is_number": 8154678,
+      "publication_year": 2009,
+      "publication_date": "Nov. 2009",
+      "start_page": "559",
+      "end_page": "565",
+      "citing_paper_count": 0,
+      "citing_patent_count": 0,
+      "index_terms": {
+        "author_terms": {
+          "terms": [
+            "Northeast india",
+            "Head and neck cancer",
+            "Electron spin resonance",
+            "Radiation induced signals"
+          ]
+        }
+      }
+    },
+    {
+      "doi": "10.1093/lpr/mgl009",
+      "title": "On the attribution of probabilities to the causes of disease",
+      "publisher": "OUP",
+      "issue": "4",
+      "issn": "1470-840X",
+      "rank": 9,
+      "volume": "4",
+      "authors": {
+        "authors": [
+          {
+            "full_name": "Peter Cooke",
+            "author_order": 1
+          },
+          {
+            "full_name": "Arianna Cowling",
+            "author_order": 2
+          }
+        ]
+      },
+      "access_type": "LOCKED",
+      "content_type": "Journals",
+      "abstract": "Leigh et al. (1996, Asbestos related lung cancer: apportionment of causation and damages to asbestos and tobacco smoke. Sourcebook of Asbestos Diseases, vol. 13, pp. 141–166) considered the problem of apportionment of causation to exposure to asbestos and to tobacco smoke in persons with asbestos-related lung cancer. The ultimate goal was to use these apportionments to determine the proportions of the total compensation for a lung cancer patient to be paid by the defendants responsible for asbestos and tobacco. The apportionment of causation amounted to a quantity being assigned as the ‘probability’ of causing the disease for each of the exposures, assuming that at least one of the exposures was implicated in the onset of disease. This causation probability for an exposure was the attributable fraction for that exposure as a proportion of the sum of the attributable fractions for all exposures. While the apportionment of causation in this way seemingly makes reasonable sense, it is nonetheless arbitrary and the apportionments have no natural interpretation as probabilities. Further, such apportionments are demonstrably incorrect, as we shall see. Intuitively, the causation probability for an exposure is its incidence rate as a proportion of the sum of the incidence rates for all exposures and in this paper we present a model which leads to causation probabilities precisely in this form.",
+      "article_number": "8157702",
+      "pdf_url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8157702",
+      "html_url": "https://ieeexplore.ieee.org/document/8157702/",
+      "abstract_url": "https://ieeexplore.ieee.org/document/8157702/",
+      "publication_title": "Law, Probability and Risk",
+      "publication_number": 8016809,
+      "is_number": 8157693,
+      "publication_year": 2005,
+      "publication_date": "Dec. 2005",
+      "start_page": "251",
+      "end_page": "256",
+      "citing_paper_count": 0,
+      "citing_patent_count": 0,
+      "index_terms": {}
+    },
+    {
+      "doi": "10.1109/I2CT.2017.8226250",
+      "title": "Tobacco smoking induced lung cancer prediction by lc-micrornas secondary structure prediction and target comparison",
+      "publisher": "IEEE",
+      "isbn": "978-1-5090-4308-8",
+      "rank": 10,
+      "authors": {
+        "authors": [
+          {
+            "affiliation": "Department of Computer Science, Amrita University, Karnataka, India",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37086270889",
+            "id": 37086270889,
+            "full_name": "B J Bipin Nair",
+            "author_order": 1
+          },
+          {
+            "affiliation": "Department of Computer Science, Amrita School of Arts and Sciences, Amrita Vishwa Vidyapeetham, Amrita University, Mysore Campus, Karnataka, India",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37087971877",
+            "id": 37087971877,
+            "full_name": "K J Anju",
+            "author_order": 2
+          },
+          {
+            "affiliation": "Amrita Vishwa Vidyapeetham, Coimbatore, Tamil Nadu, IN",
+            "authorUrl": "https://ieeexplore.ieee.org/author/37087972420",
+            "id": 37087972420,
+            "full_name": "A Jeevakumar",
+            "author_order": 3
+          }
+        ]
+      },
+      "access_type": "LOCKED",
+      "content_type": "Conferences",
+      "abstract": "Cancer is deadly, a genetic disorder in which invoke uncontrolled growth of living cells in a particular region. Cancer is usually invoked by many natural causes like exposure to UV rays, smoking tobacco, oil fogs, and exposure to radioactive frequencies. In this work, we concentrate on tobacco-induced lung cancer. There are many existing systems to detect lung cancer. But none are efficient enough to prevent it before it spreads. In this work, we propose an efficient tool to analyze the possibility of getting affected by Non-Small Cell Lung Cancer (NSCLC) by comparing Lung Cancer microRNAs (LC-miRNAs) structures. Here we use global optimal alignment and TargetScan for target comparison and binding location detection. A previous research showed that major lung cancer genes are targeted by 8 type miRNAs. These 8 LC-miRNAs (let-7a-1, miR-7-1, miR-17, miR-21, miR-96, miR-125a-5p, miR-128b, and miR-145) were used for this analysis for accuracy in research. From this work, we concluded that use of computational techniques in miRNA and sequence analysis can reduce the cost of research and increase the accuracy.",
+      "article_number": "8226250",
+      "pdf_url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8226250",
+      "html_url": "https://ieeexplore.ieee.org/document/8226250/",
+      "abstract_url": "https://ieeexplore.ieee.org/document/8226250/",
+      "publication_title": "2017 2nd International Conference for Convergence in Technology (I2CT)",
+      "conference_location": "Mumbai, India",
+      "conference_dates": "7-9 April 2017",
+      "publication_number": 8168943,
+      "is_number": 8226083,
+      "publication_year": 2017,
+      "publication_date": "7-9 April 2017",
+      "start_page": "854",
+      "end_page": "857",
+      "citing_paper_count": 1,
+      "citing_patent_count": 0,
+      "index_terms": {
+        "ieee_terms": {
+          "terms": [
+            "Cancer",
+            "Lung",
+            "Tools",
+            "Proteins",
+            "RNA",
+            "Bioinformatics",
+            "Genetics"
+          ]
+        },
+        "author_terms": {
+          "terms": [
+            "Lung Cancer",
+            "Secondary Structure Prediction",
+            "miRNA",
+            "LC-miRNA",
+            "NSCLC",
+            "Tobacco Smoking",
+            "Global Optimal Alignment",
+            "Target Prediction"
+          ]
+        }
+      },
+      "isbn_formats": {
+        "isbns": [
+          {
+            "format": "Print on Demand(PoD) ISBN",
+            "value": "978-1-5090-4308-8",
+            "isbnType": "New-2005"
+          },
+          {
+            "format": "Electronic ISBN",
+            "value": "978-1-5090-4307-1",
+            "isbnType": "New-2005"
+          }
+        ]
+      }
+    }
+  ]
+}
