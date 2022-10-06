@@ -8,10 +8,14 @@
   </head>
   <body>
     <center>
-      <form method='post' action="/search"  >
+      <form method="post" action="/search">
         {% csrf_token %}
-        <input type="text" name="search_query" />
+        <b>Query :</b><input type="text" name="search_query" />
         <br /><br /><br />
+        <b>Author :</b><input type="text" name="author" />
+        <br /><br /><br />
+        <b>Title :</b><input type="text" name="title" />
+        
         <button type="submit">Submit</button>
       </form>
     </center>
