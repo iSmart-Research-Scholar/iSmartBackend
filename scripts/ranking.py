@@ -7,59 +7,59 @@ from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
 
 ps = PorterStemmer()
-def ranking(query):
-    # block_size = 100
+def ranking(data, query):
+    block_size = 100
 
-    # # Creating the temporary files and storing the data in the temporary files after storing them in the temporary files
-    # # later I will merge them into one file which will be used for the ranking the documents    
+    # Creating the temporary files and storing the data in the temporary files after storing them in the temporary files
+    # later I will merge them into one file which will be used for the ranking the documents    
     
-    # currentBlock = 0
+    currentBlock = 0
     
-    # curr_dir = pathlib.Path(__file__).parent.resolve()
+    curr_dir = pathlib.Path(__file__).parent.resolve()
     
-    # directory = "TextFiles"
+    directory = "TextFiles"
     
-    # path = os.path.join(curr_dir, directory)
-    # os.mkdir(path)
+    path = os.path.join(curr_dir, directory)
+    os.mkdir(path)
     
-    # total_retrieved = data['total_records']
-    # total_search = data["total_searched"]
+    total_retrieved = data['total_records']
+    total_search = data["total_searched"]
     
-    # currentFile = 1
-    # articles = data['articles']
+    currentFile = 1
+    articles = data['articles']
     
-    # for i in range(len(articles)):
-    #     title = articles[i]['title']
-    #     abstract = articles[i]['abstract']
-    #     citations = articles[i]['citing_paper_count']
-    #     articleNumber = articles[i]['article_number']
-    #     publicationYear = articles[i]['publication_year']
-    #     pdfUrl = articles[i]['pdf_url']
-    #     fileName = path + f"/file{currentFile}.txt"
-    #     with open(fileName, "a") as f:
-    #         f.write(title + "\n")
-    #         f.write("@" + "\n")
-    #         f.write(abstract + "\n")
-    #         f.write("#" + "\n")
-    #         f.write(str(citations) + "\n")
-    #         f.write("$" + "\n")
-    #         f.write(str(articleNumber)+"\n")
-    #         f.write("^" + "\n")
-    #         f.write(str(publicationYear)+"\n")
-    #         f.write("&" + "\n")
-    #         f.write(pdfUrl + "\n")
-    #         f.write("---" + "\n")
-    #         currentBlock += 1
-    #     if currentBlock == block_size-1:
-    #         currentBlock = 0
-    #         fileName += 1
+    for i in range(len(articles)):
+        title = articles[i]['title']
+        abstract = articles[i]['abstract']
+        citations = articles[i]['citing_paper_count']
+        articleNumber = articles[i]['article_number']
+        publicationYear = articles[i]['publication_year']
+        pdfUrl = articles[i]['pdf_url']
+        fileName = path + f"/file{currentFile}.txt"
+        with open(fileName, "a") as f:
+            f.write(title + "\n")
+            f.write("@" + "\n")
+            f.write(abstract + "\n")
+            f.write("#" + "\n")
+            f.write(str(citations) + "\n")
+            f.write("$" + "\n")
+            f.write(str(articleNumber)+"\n")
+            f.write("^" + "\n")
+            f.write(str(publicationYear)+"\n")
+            f.write("&" + "\n")
+            f.write(pdfUrl + "\n")
+            f.write("---" + "\n")
+            currentBlock += 1
+        if currentBlock == block_size-1:
+            currentBlock = 0
+            fileName += 1
     
-    # with open(path + "/merged.txt", 'w') as f:
-    #     for i in range(1, currentFile + 1):
-    #         with open(path + f"/file{i}.txt", 'r') as file:
-    #             for line in file:
-    #                 f.write(line)
-    #         os.remove(path + f"/file{i}.txt")
+    with open(path + "/merged.txt", 'w') as f:
+        for i in range(1, currentFile + 1):
+            with open(path + f"/file{i}.txt", 'r') as file:
+                for line in file:
+                    f.write(line)
+            os.remove(path + f"/file{i}.txt")
 
     dictStore = {}
     prev = ''
@@ -114,5 +114,5 @@ def ranking(query):
 
     print(dictWeightId)
 
-    # os.remove(path + "/merged.txt")
-    # os.rmdir(path)
+    os.remove(path + "/merged.txt")
+    os.rmdir(path)
