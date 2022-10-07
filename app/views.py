@@ -16,7 +16,7 @@ def search(request):
         title=request.POST.get('title')
         author=request.POST.get('author')
         result=se.searchIEEE(query,title,author)
-        return JsonResponse(result)
+        return JsonResponse(result, safe=False)
 
 
 
