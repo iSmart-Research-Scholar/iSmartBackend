@@ -8,4 +8,5 @@ scripts/migrations/
 app/__pycache__/
 app/migrations/__pycache__/
 .env
+venv/
 
