@@ -66,7 +66,7 @@ def ranking(data, query):
     current = ''
     listIs = []
     currentId = 0
-    with open("D:/Hackathons/Backend/iSmartBackend/scripts/TextFiles/merged.txt", 'r') as f:
+    with open(path + "/merged.txt", 'r') as f:
         for line in f:
             prev = line
             prev = prev.replace('\n','')
