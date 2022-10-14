@@ -2,6 +2,7 @@ import requests,re
 from scripts import ranking
 import os
 import environ
+
 env=environ.Env(
     DEBUG=(bool,False)
 )
@@ -26,5 +27,6 @@ class searcher:
         link=f'http://ieeexploreapi.ieee.org/api/v1/search/articles?apikey={apiKey}&format=json&max_records=200&start_record=1&sort_order=asc&sort_field=article_number&querytext={query}&article_title={title}&author={author}'
         result=requests.get(link)
         ranking.ranking(result.json(), querytosend)
+        return result.json()
 # # Prints: I-cant-get-no-satisfaction"
 #     print(urlify("I can't get no satisfaction!"))

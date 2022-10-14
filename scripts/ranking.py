@@ -5,6 +5,7 @@ import os
 from gensim.parsing.preprocessing import remove_stopwords # this helps to remove the stop words
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
+from django.shortcuts import render,HttpResponse
 
 ps = PorterStemmer()
 def ranking(data, query):
@@ -72,10 +73,15 @@ def ranking(data, query):
             prev = prev.replace('\n','')
             prev = prev.strip()
             if prev == '---':
-                currentId += 1
+                listIs.append(current)
+                if 'ieee_terms' in articles[currentId]['index_terms']:
+                    listIs.append({'ieee_terms' : articles[currentId]['index_terms']['ieee_terms']['terms']})
+                if 'author_terms' in articles[currentId]['index_terms']:
+                    listIs.append({'author_terms' : articles[currentId]['index_terms']['author_terms']['terms']})
                 dictStore[currentId] = listIs
                 listIs = []
-            elif prev == '@' or prev == '#' or prev == '$' or prev == '&' or prev == '^':
+                currentId += 1
+            elif prev == '@' or prev == '#' or prev == '$' or prev == '&' or prev == '^':                
                 listIs.append(ps.stem(remove_stopwords(current)).lower())
                 current = ''
             else:
@@ -90,29 +96,67 @@ def ranking(data, query):
     citationsWeight = 0.1
     dictWeightId = {}
 
-    query = ps.stem(remove_stopwords(query)).lower()
+    query = (remove_stopwords(query)).lower()
     listWords = query.split(' ')
+    for index, word in enumerate(listWords):
+        listWords[index] = ps.stem(listWords[index])
 
     for keyVal in dictStore:
+        number_index_terms = 0
+        number_author_terms = 0 
+        if len(dictStore[keyVal]) == 7:
+            if 'ieee_terms' in dictStore[keyVal][6]:
+                for word in dictStore[keyVal][6]['ieee_terms']:
+                    currWord = word.split(' ')
+                    for curr in currWord:
+                        if ps.stem(curr).lower() in listWords:
+                            number_index_terms += 1
+                    
+            else:
+                for word in dictStore[keyVal][6]['author_terms']:
+                    currWord = word.split(' ')
+                    for curr in currWord:
+                        if ps.stem(curr).lower() in listWords:
+                            number_author_terms += 1
+        elif len(dictStore[keyVal]) == 8:
+            for word in dictStore[keyVal][6]['ieee_terms']:
+                currWord = word.split(' ')
+                for curr in currWord:
+                    if ps.stem(curr).lower() in listWords:
+                        number_index_terms += 1
+            for word in dictStore[keyVal][7]['author_terms']:
+                currWord = word.split(' ')
+                for curr in currWord:
+                    if ps.stem(curr).lower() in listWords:
+                        number_author_terms += 1
         weight = 0
         titleIs = dictStore[keyVal][0]
         abstractIs = dictStore[keyVal][1]
         citationsIs = int(dictStore[keyVal][2])
         year = int(dictStore[keyVal][4])/1000
-        countInTitleWords = []
-        countInAbstractWords = []
+        presentInTitle = 0
+        presentInContent = 0
         for word in listWords:
             countInTitle = titleIs.count(word)
             countInAbstract = abstractIs.count(word)
-            countInTitleWords.append(countInTitle)
-            countInAbstractWords.append(countInAbstract)
+            if countInTitle != 0:
+                presentInTitle += 1
+            if countInAbstract != 0:
+                presentInContent += 1
             weight += countInTitle*titleWeight + countInAbstract*abstractWeight
-        dictWeightId[keyVal] = [weight+year+citationsIs*citationsWeight, dictStore[keyVal][3], countInTitle, countInAbstract, countInTitleWords, countInAbstractWords]
+        
+        weight = weight*(presentInTitle + presentInContent)
+        weight = weight + citationsIs * citationsWeight
+        weight = weight + year
+        # weight = weight + number_index_terms*0.7 + number_author_terms*0.4
+        dictWeightId[keyVal] = [weight, dictStore[keyVal][3]]
 
 
     dictWeightId = dict(sorted(dictWeightId.items(), key = lambda x:(x[1][0], x[0]), reverse = True))
 
     print(dictWeightId)
+    # print(dictStore)
 
     os.remove(path + "/merged.txt")
     os.rmdir(path)
+    
