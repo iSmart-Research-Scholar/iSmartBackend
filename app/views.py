@@ -1,4 +1,3 @@
-from turtle import title
 from urllib import response
 from django.shortcuts import render,HttpResponse
 from scripts.searcher import searcher 
