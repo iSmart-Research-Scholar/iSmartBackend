@@ -31,7 +31,12 @@ SECRET_KEY = "django-insecure-90%q5p08!76d4$w-cv65p*ds6%by$9%k1&_-(lr7oi7nfdin)p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '*',
+    '0.0.0.0',    
+    '127.0.0.1',
+    'ismartranker.herokuapp.com',
+]
 
 
 # Application definition
