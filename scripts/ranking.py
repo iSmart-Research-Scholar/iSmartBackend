@@ -1,9 +1,15 @@
 from gensim.parsing.preprocessing import remove_stopwords # this helps to remove the stop words
 from nltk.stem import PorterStemmer
+import requests  # for using API
+import xml.etree.ElementTree as ET  # for parsing XML
+import json
+
+
 ps = PorterStemmer()
 import json
 
 def ranking(data, query, choosen):
+    print("Hello")
     totalRetrieved = data['total_records']
     totalSearched = data['total_searched']
     articles = data['articles']
@@ -37,7 +43,16 @@ def ranking(data, query, choosen):
                         dictIDFWord[word] += 1
     
     citationsWeight = 2
+
     for i in range(len(articles)):
+        issn = articles[i]['issn']
+
+        jsonObject = requests.get(f"https://api.elsevier.com/content/serial/title/issn/{issn}?apiKey=7f59af901d2d86f78a1fd60c1bf9426a&field=SJR,SNIP&view=STANDARD")
+
+        jsonObject = jsonObject.text
+        result = json.loads(jsonObject)
+
+        print(result['serial-metadata-response']['entry'][0]['SNIPList']['SNIP'][0]['$'])
         weight = 0
         title = articles[i]['title']
         if 'abstract' in articles[i]:
