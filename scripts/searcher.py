@@ -8,7 +8,7 @@ env=environ.Env(
 )
 environ.Env.read_env("D:/Hackathons/Backend/iSmartBackend/.env")
 class searcher:
-    def _urlify(self,s):
+    def _urlify(self,s = ''):
     
         # Remove all non-word characters (everything except numbers and letters)
         s = re.sub(r"[^\w\s]", '', s)
