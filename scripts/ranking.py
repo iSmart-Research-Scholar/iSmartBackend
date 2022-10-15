@@ -10,6 +10,7 @@ ps = PorterStemmer()
 import json
 
 def ranking(data, query, choosen):
+    Articles = []
     totalRetrieved = data['total_records']
     totalSearched = data['total_searched']
     articles = data['articles']
@@ -18,7 +19,6 @@ def ranking(data, query, choosen):
     for index, word in enumerate(listWords):
         listWords[index] = word
     listStore = []
-    dictScore = {}
     dictIDFTitle = {}
     dictIDFWord = {}
     for i in range(len(articles)):
@@ -45,8 +45,6 @@ def ranking(data, query, choosen):
     citationsWeight = 2
 
     for i in range(len(articles)):
-        
-
         weight = 0
         title = articles[i]['title']
         if 'abstract' in articles[i]:
@@ -110,7 +108,6 @@ def ranking(data, query, choosen):
 
             jsonObject = jsonObject.text
             result = json.loads(jsonObject)
-            print(result)
             if 'serial-metadata-response' in result and 'entry' in result['serial-metadata-response'] and len(result['serial-metadata-response']['entry']) > 0 and 'SNIPList' in result['serial-metadata-response']['entry'][0] and 'SNIP' in result['serial-metadata-response']['entry'][0]['SNIPList'] and len(result['serial-metadata-response']['entry'][0]['SNIPList']['SNIP']) > 0 and '$' in result['serial-metadata-response']['entry'][0]['SNIPList']['SNIP'][0]:
                 impactFactor = result['serial-metadata-response']['entry'][0]['SNIPList']['SNIP'][0]['$']
             else:
@@ -120,6 +117,7 @@ def ranking(data, query, choosen):
             impactFactor = 0
         
         listStore.append([weight, articles[i]['publication_year'], articles[i]['citing_paper_count'], i, impactFactor])
+
     if choosen == 1:
         listStore = sorted(listStore, key = lambda x:(x[1], x[0]), reverse=True)
     elif choosen == 2:
@@ -127,9 +125,14 @@ def ranking(data, query, choosen):
     else: 
         listStore = sorted(listStore, key = lambda x : x[0], reverse = True)
     for i in range(len(listStore)):
-        if i not in dictScore:
-            dictScore[i] = {'impactFactor' : impactFactor, 'articledata': articles[listStore[i][3]]}
-            dictScore[i]['articledata']['rank'] = i+1
-    dictScore = json.dumps(dictScore, ensure_ascii=False).encode('utf-8')
-    dictScore = json.loads(dictScore)
-    return dictScore
+        # if i not in dictScore:
+        #     dictScore[i] = {'impactFactor' : listStore[i][4], 'article': articles[listStore[i][3]]}
+        #     dictScore[i]['article']['rank'] = i+1
+        articles[listStore[i][3]]['impactFactor'] = listStore[i][4]
+        articles[listStore[i][3]]['rank'] = i+1
+        Articles.append(articles[listStore[i][3]])
+    # dictScore['totalSearchedRecords'] = totalSearched
+    # dictScore['totalRetievedRecords'] = totalRetrieved 
+    # dictScore = json.dumps(dictScore, ensure_ascii=False).encode('utf-8')
+    # dictScore = json.loads(dictScore)
+    return {'articles' : Articles}
