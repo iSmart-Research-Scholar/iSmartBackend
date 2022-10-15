@@ -112,11 +112,17 @@ def ranking(data, query, choosen):
                 impactFactor = result['serial-metadata-response']['entry'][0]['SNIPList']['SNIP'][0]['$']
             else:
                 impactFactor = 0
+            
+            if 'serial-metadata-response' in result and 'entry' in result['serial-metadata-response'] and len(result['serial-metadata-response']['entry']) > 0 and 'SJRList' in result['serial-metadata-response']['entry'][0] and 'SJR' in result['serial-metadata-response']['entry'][0]['SJRList'] and len(result['serial-metadata-response']['entry'][0]['SJRList']['SJR']) > 0 and '$' in result['serial-metadata-response']['entry'][0]['SJRList']['SJR'][0]:
+                influenceScore = result['serial-metadata-response']['entry'][0]['SJRList']['SJR'][0]['$']
+            else:
+                influenceScore = 0
 
         else:
             impactFactor = 0
+            influenceScore = 0
         
-        listStore.append([weight, articles[i]['publication_year'], articles[i]['citing_paper_count'], i, impactFactor])
+        listStore.append([weight, articles[i]['publication_year'], articles[i]['citing_paper_count'], i, impactFactor, influenceScore])
 
     if choosen == 1:
         listStore = sorted(listStore, key = lambda x:(x[1], x[0]), reverse=True)
@@ -125,14 +131,8 @@ def ranking(data, query, choosen):
     else: 
         listStore = sorted(listStore, key = lambda x : x[0], reverse = True)
     for i in range(len(listStore)):
-        # if i not in dictScore:
-        #     dictScore[i] = {'impactFactor' : listStore[i][4], 'article': articles[listStore[i][3]]}
-        #     dictScore[i]['article']['rank'] = i+1
         articles[listStore[i][3]]['impactFactor'] = listStore[i][4]
+        articles[listStore[i][3]]['influenceScore'] = listStore[i][5]
         articles[listStore[i][3]]['rank'] = i+1
         Articles.append(articles[listStore[i][3]])
-    # dictScore['totalSearchedRecords'] = totalSearched
-    # dictScore['totalRetievedRecords'] = totalRetrieved 
-    # dictScore = json.dumps(dictScore, ensure_ascii=False).encode('utf-8')
-    # dictScore = json.loads(dictScore)
     return {'articles' : Articles}
