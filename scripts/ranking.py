@@ -1,3 +1,4 @@
+import re
 from gensim.parsing.preprocessing import remove_stopwords # this helps to remove the stop words
 from nltk.stem import PorterStemmer
 import requests  # for using API
@@ -9,7 +10,6 @@ ps = PorterStemmer()
 import json
 
 def ranking(data, query, choosen):
-    print("Hello")
     totalRetrieved = data['total_records']
     totalSearched = data['total_searched']
     articles = data['articles']
@@ -45,14 +45,8 @@ def ranking(data, query, choosen):
     citationsWeight = 2
 
     for i in range(len(articles)):
-        issn = articles[i]['issn']
+        
 
-        jsonObject = requests.get(f"https://api.elsevier.com/content/serial/title/issn/{issn}?apiKey=7f59af901d2d86f78a1fd60c1bf9426a&field=SJR,SNIP&view=STANDARD")
-
-        jsonObject = jsonObject.text
-        result = json.loads(jsonObject)
-
-        print(result['serial-metadata-response']['entry'][0]['SNIPList']['SNIP'][0]['$'])
         weight = 0
         title = articles[i]['title']
         if 'abstract' in articles[i]:
@@ -108,7 +102,24 @@ def ranking(data, query, choosen):
             
         weight = weight + citations*citationsWeight
         weight = round(weight, 2)
-        listStore.append([weight, articles[i]['publication_year'], articles[i]['citing_paper_count'], i])
+
+        if 'issn' in articles[i]:
+            issn = articles[i]['issn']
+
+            jsonObject = requests.get(f"https://api.elsevier.com/content/serial/title/issn/{issn}?apiKey=d719ef4dd2aa7050b35dfdf383582e75&field=SJR,SNIP&view=STANDARD")
+
+            jsonObject = jsonObject.text
+            result = json.loads(jsonObject)
+            print(result)
+            if 'serial-metadata-response' in result and 'entry' in result['serial-metadata-response'] and len(result['serial-metadata-response']['entry']) > 0 and 'SNIPList' in result['serial-metadata-response']['entry'][0] and 'SNIP' in result['serial-metadata-response']['entry'][0]['SNIPList'] and len(result['serial-metadata-response']['entry'][0]['SNIPList']['SNIP']) > 0 and '$' in result['serial-metadata-response']['entry'][0]['SNIPList']['SNIP'][0]:
+                impactFactor = result['serial-metadata-response']['entry'][0]['SNIPList']['SNIP'][0]['$']
+            else:
+                impactFactor = 0
+
+        else:
+            impactFactor = 0
+        
+        listStore.append([weight, articles[i]['publication_year'], articles[i]['citing_paper_count'], i, impactFactor])
     if choosen == 1:
         listStore = sorted(listStore, key = lambda x:(x[1], x[0]), reverse=True)
     elif choosen == 2:
@@ -117,8 +128,8 @@ def ranking(data, query, choosen):
         listStore = sorted(listStore, key = lambda x : x[0], reverse = True)
     for i in range(len(listStore)):
         if i not in dictScore:
-            dictScore[i] = articles[listStore[i][3]]
-            dictScore[i]['rank'] = i+1
+            dictScore[i] = {'impactFactor' : impactFactor, 'articledata': articles[listStore[i][3]]}
+            dictScore[i]['articledata']['rank'] = i+1
     dictScore = json.dumps(dictScore, ensure_ascii=False).encode('utf-8')
     dictScore = json.loads(dictScore)
     return dictScore
