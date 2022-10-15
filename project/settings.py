@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 import environ
+
 env=environ.Env(
     DEBUG=(bool,False)
 )
@@ -35,7 +36,7 @@ ALLOWED_HOSTS = [
     '*',
     '0.0.0.0',    
     '127.0.0.1',
-    'ismartranker.herokuapp.com',
+    'ismartbackend.herokuapp.com',
 ]
 
 
