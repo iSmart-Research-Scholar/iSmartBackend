@@ -18,37 +18,44 @@ def ranking(data, query, choosen):
     dictIDFWord = {}
     for i in range(len(articles)):
         title = articles[i]['title']
-        abstract = articles[i]['abstract']
+        abstract = ''
+        if 'abstract' in articles[i]:
+            abstract = articles[i]['abstract']
         title = ps.stem(remove_stopwords(title).lower())
-        abstract = ps.stem(remove_stopwords(abstract).lower())
+        if 'abstract' in articles[i]:
+            abstract = ps.stem(remove_stopwords(abstract).lower())
         for word in listWords:
             if title.count(word) > 0:
                 if word not in dictIDFTitle:
                     dictIDFTitle[word] = 1
                 else:
                     dictIDFTitle[word] += 1
-            if abstract.count(word) > 0:
-                if word not in dictIDFWord:
-                    dictIDFWord[word] = 1
-                else:
-                    dictIDFWord[word] += 1
+            if abstract != '':
+                if abstract.count(word) > 0:
+                    if word not in dictIDFWord:
+                        dictIDFWord[word] = 1
+                    else:
+                        dictIDFWord[word] += 1
     
 
     for i in range(len(articles)):
         weight = 0
         title = articles[i]['title']
-        abstract = articles[i]['abstract']
+        if 'abstract' in articles[i]:
+            abstract = articles[i]['abstract']
         citations = articles[i]['citing_paper_count']
         title = ps.stem(remove_stopwords(title).lower())
         abstract = ps.stem(remove_stopwords(abstract).lower())
         for word in listWords:
             countTitle = title.count(word)
-            countAbstract = abstract.count(word)
+            if 'abstract' in articles[i]:
+                countAbstract = abstract.count(word)
             totalTitle = len(title.split(' '))
-            totalAbstract = len(abstract.split(' '))
+            if 'abstract' in articles[i]:
+                totalAbstract = len(abstract.split(' '))
             if word in dictIDFTitle:
                 weight += (totalRetrieved/(dictIDFTitle[word]+1)) * (countTitle/totalTitle)
-            if word in dictIDFWord:
+            if word in dictIDFWord and 'abstract' in articles[i]:
                 weight += (totalRetrieved/(dictIDFWord[word]+1)) * (countAbstract/totalAbstract)
         
         weight = weight + citations*0.5
