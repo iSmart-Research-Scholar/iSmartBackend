@@ -26,7 +26,7 @@ class searcher:
         query=self.__urlify(query)
         link=f'http://ieeexploreapi.ieee.org/api/v1/search/articles?apikey={apiKey}&format=json&max_records=200&start_record=1&sort_order=asc&sort_field=article_number&querytext={query}&article_title={title}&author={author}'
         result=requests.get(link)
-        ranking.ranking(result.json(), querytosend)
-        return result.json()
+        jsonobj = ranking.ranking(result.json(), querytosend, 0)
+        return jsonobj
 # # Prints: I-cant-get-no-satisfaction"
 #     print(urlify("I can't get no satisfaction!"))
