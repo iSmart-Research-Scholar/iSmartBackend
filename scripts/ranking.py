@@ -63,6 +63,7 @@ def ranking(data, query, choosen):
     for i in range(len(listStore)):
         if i not in dictScore:
             dictScore[i] = articles[listStore[i][3]]
+            dictScore[i]['rank'] = i+1
     dictScore = json.dumps(dictScore, ensure_ascii=False).encode('utf-8')
     dictScore = json.loads(dictScore)
     return dictScore
